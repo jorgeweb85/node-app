@@ -20,11 +20,11 @@ run: npm install
 - name: Ejecutar pruebas
 run: npm test
 - name: Construir imagen de Docker
-run: docker build -t tudockerhubusername/node-app:latest.
+run: docker build -t jorge8575/node-app:latest.
 name: Iniciar sesión en Docker Hub
 uses: docker/login-action@v2
 with:
 username: ${{ secrets.DOCKERHUB_USERNAME }}
 password: ${{ secrets.DOCKERHUB_TOKEN }}
 - name: Enviar imagen de Docker
-run: docker push tudockerhubusername/node-app:latest
+run: docker push jorge8575/node-app:latest
